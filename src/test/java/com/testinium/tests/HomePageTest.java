@@ -27,5 +27,10 @@ public class HomePageTest extends BaseTest {
         homePage= new HomePage();
         homePage.allBookandHobi();
     }
+    @Test
+    public void logOutTest(){
+        homePage= new HomePage();
+        homePage.logOut();
+    }
 
 }

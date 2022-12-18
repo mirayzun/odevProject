@@ -21,4 +21,9 @@ public class BasketPageTest extends BaseTest {
         basketPage= new BasketPage();
         basketPage.productSell();
     }
+    @Test
+    public void ProductSellStepTest(){
+        basketPage= new BasketPage();
+        basketPage.productSellStep();
+    }
 }

@@ -13,4 +13,9 @@ public class AccountPageTest extends BaseTest {
        accountPage= new AccountPage();
        accountPage.loginControl();
     }
+    @Test
+    public void AddAddressTest(){
+        accountPage = new AccountPage();
+        accountPage.addAddress();
+    }
 }

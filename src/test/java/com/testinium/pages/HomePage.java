@@ -1,15 +1,20 @@
 package com.testinium.pages;
+import com.testinium.driver.BaseTest;
 import com.testinium.methods.Method;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 
 public class HomePage {
 
     Method method;
     Logger logger = LogManager.getLogger(HomePage.class);
+    LoginPage loginPage;
     public HomePage(){
         method= new Method();
+        loginPage= new LoginPage();
     }
     /* CASE:
     "https://www.kitapyurdu.com/" adresine git
@@ -49,6 +54,12 @@ public class HomePage {
         getHome();
         method.click(By.xpath("//span[text()='Tüm Kitaplar']"));
         method.click(By.xpath("//a[text()='Hobi']"));
+    }
+    public void logOut(){
+        loginPage.login();
+        WebElement element = method.findElement(By.cssSelector(".menu.top.login"));
+        Actions action  = new Actions(BaseTest.mDriver);
+        action.moveToElement(element).perform();
     }
 
 }
