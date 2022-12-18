@@ -37,10 +37,28 @@ public class BasketPage {
         basketGetPage();
         method.sendKeys(By.xpath("//input[@name='quantity']"),"10");
     }
+    /* CASE
+    "https://www.kitapyurdu.com/" adresine git
+    sepetim butonuna tıkla
+    login kontrolu
+    satın al butonua tıkla
+     */
     public void productSell(){
         productNumber();
         method.click(By.xpath("//a[@class='button red']"));
     }
+    /*
+    "https://www.kitapyurdu.com/" adresine git
+    sepetim butonuna tıkla
+    login kontrolu
+    satın al butonua tıkla
+    adres sayfasında devam butonuna tikla
+    kargo sayfasında devam butonuna tikla
+    gecersiz kart bilgisi gir
+    devama tikla
+    satin alma formu onayla
+    satin al tikla
+     */
     public void productSellStep(){
         productSell();
         method.click(By.xpath("//button[@id='button-checkout-continue']"));

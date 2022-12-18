@@ -28,6 +28,16 @@ public class AccountPage {
         Assert.assertTrue(method.isElementVisible(By.cssSelector(".section")));
         logger.info("hesap kontorlu saglandi");
     }
+    /* CASE
+    "https://www.kitapyurdu.com/" adresine git
+    login kontrolu
+    merhaba ad-soyad alanına tıklan
+    hesabım butonuna tıkla
+    adreslerim alnına gel
+    yeni adres ekle tıkla
+    formu doldur
+    gönder butonuna tıkla
+     */
     public void addAddress()
     {
         loginPage.login();

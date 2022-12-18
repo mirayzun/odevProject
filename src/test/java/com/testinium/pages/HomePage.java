@@ -55,6 +55,12 @@ public class HomePage {
         method.click(By.xpath("//span[text()='Tüm Kitaplar']"));
         method.click(By.xpath("//a[text()='Hobi']"));
     }
+    /*
+    "https://www.kitapyurdu.com/" adresine git
+    login kontrolu
+    merhaba ad-soyad alanına tıkla
+    çıkış butonuna tıkla
+     */
     public void logOut(){
         loginPage.login();
         WebElement element = method.findElement(By.cssSelector(".menu.top.login"));

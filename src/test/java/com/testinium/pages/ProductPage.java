@@ -13,7 +13,6 @@ import java.util.Random;
 public class ProductPage {
     Method method;
     HomePage homePage;
-    AccountPage accountPage;
     LoginPage loginPage;
     CatalogPage catalogPage;
     Logger logger = LogManager.getLogger(ProductPage.class);
@@ -83,6 +82,14 @@ public class ProductPage {
         method.selectByText(By.cssSelector(".product-filter-header select"),"Yüksek Oylama");
         logger.info("yuksek oylama secildi");
     }
+    /*
+    "https://www.kitapyurdu.com/" adresine git
+    tüm kitaplar menüsüne tıklanır
+    hobi kategorisi seçilir
+    random ürün seç
+    urun detayına git
+    sepete ekleye tıkla
+     */
     public void hobiPageRandom()
     {
         method.getPage("https://www.kitapyurdu.com/kategori/kitap-hobi/1_212.html");

@@ -81,17 +81,21 @@ public class Method {
         getSelect(by).selectByVisibleText(text);
     }
 
-    public String getAttribute(By by, String attributeName){ // elementin attribute'sini alır
+    /*public String getAttribute(By by, String attributeName){ // elementin attribute'sini alır
         return findElement(by).getAttribute(attributeName);
-    }
+    }     */
 
+    /*
     public String getText(By by){ // bir elementin Text'ini alır
+
         return findElement(by).getText();
     }
+    */
 
-    public String getValue(By by){
+    /*public String getValue(By by){
         return jsDriver.executeScript("return arguments[0].value;",findElement(by)).toString();
     }
+    */
     public String AddFavoritesXPath(int number){
         var st = String.format("(//div[@class='product-cr'][%s])/div[@class='grid_2 alpha omega relative']/div[@class='hover-menu']/a[@class='add-to-favorites']", number);
         return st;
@@ -102,11 +106,11 @@ public class Method {
         var element = findElement(By.xpath(path));
         return element.getAttribute("id");
     }
-    public String GetFavoriteId(int number)
+    /*public String GetFavoriteId(int number)
     {
         var element=findElement(By.xpath("(//div[@class='product-cr'])[%s]"));
         return element.getAttribute("id");
-    }
+    }*/
 
     public static ArrayList<String> favoriteId = new ArrayList<String>();
     public static ArrayList<String> productId= new ArrayList<String>();
